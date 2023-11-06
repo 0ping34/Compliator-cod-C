@@ -1,0 +1,41 @@
+# Define the compiler
+CC=gcc
+
+# Define any compile-time flags
+CFLAGS=-Wall -g
+
+# Define the lexer and parser generators
+LEX=flex
+YACC=bison
+
+# Define the source files for the build
+LEX_FILE=C_MODIF2.l
+YACC_FILE=C_MODIF2.y
+SRC_FILES=C_MODIF2a.c
+
+# Define the output binary
+OUTPUT=C_MODIF2A.exe
+
+# Define the generated files
+LEX_OUT=C_MODIF2.yy.c
+YACC_OUT=C_MODIF2.tab.c
+YACC_HEADER=C_MODIF2.tab.h
+
+# The main target
+all: $(OUTPUT)
+
+$(OUTPUT): $(LEX_OUT) $(YACC_OUT) $(SRC_FILES)
+	$(CC) $(CFLAGS) -o $(OUTPUT) $(LEX_OUT) $(YACC_OUT) $(SRC_FILES) -lm
+
+$(LEX_OUT): $(LEX_FILE)
+	$(LEX) -o $(LEX_OUT) $(LEX_FILE)
+
+$(YACC_OUT): $(YACC_FILE)
+	$(YACC) -d -o $(YACC_OUT) $(YACC_FILE)
+
+# The .PHONY rule keeps make from doing something with a file named clean
+.PHONY: clean
+
+# The clean target
+clean:
+	rm -f *.o $(LEX_OUT) $(YACC_OUT) $(YACC_HEADER) $(OUTPUT)

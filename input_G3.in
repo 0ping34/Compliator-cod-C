@@ -1,0 +1,109 @@
+a= 20;
+b =30/2, c=8*9;
+writeln a; //20
+writeln b; //15
+writeln c; //72
+D=90u;
+writeln D; //90
+
+a=045; //37
+writeln a;
+a=0xA5; //165
+writeln a;
+a=0Xa5; //165
+writeln a;
+
+
+//coment pe o linie
+
+/* coment pe mai multe
+linii
+de testat!!!
+*/
+
+a=67u; 
+b=7U;
+writeln a+b; //74.000000
+a=67l;
+b=-7L;
+writeln a+b; //60.000000
+a=67ul; 
+b=7UL;
+writeln a+b; //74.000000
+
+a=5;
+a++;
+writeln a; //6
+
+a=5;
+--a;
+writeln a; //4
+
+a=5;
+b=a++;
+writeln a; //6 este corect obtin 7
+writeln b; //5
+
+a=5;
+b=++a; 
+writeln a; //6 este corect obtin 7
+writeln b; //6 
+
+A=-89.7;
+B=5.6E-1;
+writeln A*B; //-50.231998
+
+A=6;
+A/=2;
+writeln A; //3
+
+A=6;
+A*=2;
+writeln A; //12
+
+a=5;
+b=2*5;
+
+while(a>0){
+a=a-1;
+writeln a;} // 4 3 2 1 0
+
+a=10, b=20;
+while (a>=0){
+	a=a-2;
+	b=b-4;
+	writeln a;
+	writeln b;
+} //8 6 4 2 0 -2
+   // 16 12 8 4 0 -4 
+
+a=100;
+writeln a; //100
+{a=20; a=a-100; writeln a;
+}//-80
+
+
+a=10; b=2;
+do{
+	writeln a;
+	a--;
+}
+while (a>=0); //10 9 8 7 6 5 4 3 2 1 0
+
+//a=3; 
+//switch (a) {
+//	case 1: break;
+//	case 2: break;
+//	case 3: 
+//		writeln a;
+//		break;
+//}
+//Eroare de segmentare
+a=4;
+switch (a) {
+	case 1: break;
+	case 2: break;
+	case 3: break;
+	default:
+		writeln a;
+} //4

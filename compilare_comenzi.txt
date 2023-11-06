@@ -1,0 +1,9 @@
+//versiunea INTERPRETATIVA(A)
+bison -d C_MODIF2.y
+flex -oC_MODIF2.yy.c C_MODIF2.l
+gcc -oC_MODIF2A.exe C_MODIF2.tab.c C_MODIF2.yy.c C_MODIF2a.c -lm -lfl
+
+//format graphic ARBORELE DE ANALIZA SINTACTICA(C)
+bison -d C_MODIF2.y
+flex -oC_MODIF2.yy.c C_MODIF2.l
+gcc -oC_MODIF2C.exe C_MODIF2.tab.c C_MODIF2.yy.c C_MODIF2c.c -lm -lfl

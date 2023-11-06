@@ -1,0 +1,108 @@
+a= 20;
+b =30/2, c=8*9;
+writeln a; 
+writeln b; 
+writeln c; 
+D=90u;
+writeln D; 
+
+a=045; //37
+writeln a;
+a=0xA5; //165
+writeln a;
+a=0Xa5; //165
+writeln a;
+
+
+//coment pe o linie
+
+/* coment pe mai multe
+linii
+de testat!!!
+*/
+
+a=67u; 
+b=7U;
+writeln a+b; 
+a=67l;
+b=-7L;
+writeln a+b; 
+a=67ul; 
+b=7UL;
+writeln a+b; 
+
+a=5;
+a++;
+writeln a; 
+
+a=5;
+--a;
+writeln a; 
+
+a=5;
+b=a++;
+writeln a; 
+writeln b; 
+
+a=5;
+b=++a; 
+writeln a; 
+writeln b; 
+
+A=-89.7;
+B=5.6E-1;
+writeln A*B; 
+
+A=6;
+A/=2;
+writeln A;
+
+A=6;
+A*=2;
+writeln A;
+
+a=5;
+b=2*5;
+
+while(a>0){
+a=a-1;
+writeln a;} 
+
+a=10, b=20;
+while (a>=0){
+	a=a-2;
+	b=b-4;
+	writeln a;
+	writeln b;
+} 
+
+a=100;
+writeln a; 
+{a=20; a=a-100; writeln a;
+}
+
+
+//a=10; b=2;
+//do{
+//	writeln a;
+//	a--;
+//}
+//while (a>=0); //out of bonds fara motiv
+
+a=3; 
+switch (a) {
+	case 1: break;
+	case 2: break;
+	case 3: 
+		writeln a;
+		break;
+}
+
+a=4;
+switch (a) {
+	case 1: break;
+	case 2: break;
+	case 3: break;
+	default:
+		writeln a;
+} 
